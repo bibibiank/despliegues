@@ -20,7 +20,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'app',
 ]
 
@@ -36,10 +35,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-
 # URLS
 ROOT_URLCONF = 'config.urls'
-
 
 # TEMPLATES
 TEMPLATES = [
@@ -65,8 +62,12 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # DATABASE
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'despliegues',
+        'USER': 'yoyoyo',
+        'PASSWORD': '123456',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
